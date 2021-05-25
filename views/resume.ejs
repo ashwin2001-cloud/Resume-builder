@@ -1,0 +1,74 @@
+<link rel="stylesheet" href="/css/resume.css">
+<%  var month=["january","february","march","april","may","june","july","august","september","october","november","december"] %>
+<section id="root">
+        <div id="page">
+            <!-- <%= user %> -->
+            <hr class="resume-progress margin10" style="height: 7px; background: linear-gradient(to right, #7dc57c 0, #7dc57c 16.6%, #1295c9 16.6%, #1295c9 33.2%, #815874 33.2%, #815874 49.8%, #fada58 49.8%, #fada58 66.4%, #e15554 66.4%, #e15554 83%, #ff8000 83%, #ff8000 99.6%);">
+            <section id="info-social-links">
+            <div id="basic-info" class="margin10">
+                <p id="name" ><%= user.name %></p>
+                <p id="email" class="info1"><%= user.email %></p>
+                <p id="description" class="info1"><%= user.description %></p>
+                <p id="phone" class="info1"><%= user.phone %></p>
+            </div>
+            <div id="social-links">
+                <% for(var l of user.socialLink){ %>
+                    <span id="link-title"><%= l.name %></span>:
+                    <a href="<%= l.link %>" target="_blank" ><%= l.link %></a>
+                
+                
+                <% } %>
+            </div>
+            </section>
+            <hr class="margin10">
+            <div id="education-container" class="margin10">
+                    <h2 class="heading">Education</h2>
+            <% for(var edu of user.education){ %>
+                
+                <span class="title"><%= edu.degree %></span>
+                
+                (<span ><%= edu.startDate %>-</span>
+                <span ><%= edu.endDate %></span>)
+                <p class="info"><%= edu.institute %></p>
+
+            <% } %>
+           </div>
+           <hr class="margin10">
+           <div id="experience-container" class="margin10">
+                <h2 class="heading">Experience</h2>
+                <% for(var exp of user.experience){ %>
+                    
+                    <p class="title"><%= exp.designation %></p>
+                    <span class="info"><%= exp.organisation %></span>
+                    
+                    
+                    (<span class="info"><%= exp.startDate %>-</span>
+                    <span class="info"><%= exp.endDate %></span>)
+                    <p class="info"><%= exp.description %></p>
+        
+                <% } %>
+            </div>
+            <hr class="margin10">
+            <div id="project-container" class="margin10">
+                    <h2 class="heading">Projects</h2>
+                <% for(var pro of user.project){ %>
+                    
+                    <p class="title"><%= pro.title %></p>
+                    <a href="<%= pro.link %>" target="_blank" ><%= pro.link %></a>
+                    <p class="info"><%= pro.description %></p>
+                    
+        
+                <% } %>  
+            </div>         
+            
+        </div>
+        <div style="margin-top:10px; float: right; margin-right:14%;">
+            <form action="/goback" method="POST">
+                <input type="submit" value="Go Back to original form">
+            </form>
+            <button id="download">Download As PDF</button>
+        </div>
+        
+</section>
+<script src="https://raw.githack.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
+<script src="/js/pdf.js"></script>
