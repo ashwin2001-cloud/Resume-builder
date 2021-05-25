@@ -1,0 +1,100 @@
+body{
+    background-color: grey;
+#root{
+    background-color:grey;
+    height:auto;
+    // height: 150vh;
+    width: 100%;
+    // padding-right: 15px;
+    // padding-left: 15px;
+    // margin-right: auto;
+    box-sizing:border-box;
+    // margin-left: auto;
+    #page{
+        background-color: white;
+        
+        width:70vw;
+        // height:150vh;
+        box-sizing:border-box;
+        margin:auto;
+        padding-bottom:20px;
+        
+        
+       
+        .resume-progress{
+            
+            height:7px;
+            background: linear-gradient(to right,#7dc57c 0,#7dc57c 16.6%,#1295c9 16.6%,#1295c9 33.2%,#815874 33.2%,#815874 49.8%,#fada58 49.8%,#fada58 66.4%,#e15554 66.4%,#e15554 83%,#ff8000 83%,#ff8000 99.6%);
+        }
+
+
+    
+    .heading{
+        color:#2546b3;
+    }
+    .margin10{
+        margin-left:1.5rem;
+        margin-right:1.5rem;
+    }
+    .info{
+        color:#767676;
+        line-height: 0.9px;
+        font-size:18px;
+    }
+    .info1{
+        line-height: 1.5px;
+
+    }
+    .title{
+        line-height:2.5px;
+    }
+    #info-social-links{
+        display:flex;
+        justify-content: space-between;
+        #basic-info{
+            #name{
+                font-size:2rem;
+                font-family:arial;
+                
+            }
+            .info{
+                font-size:1rem;
+                font-family:arial;
+    
+            }
+        }
+        #social-links{
+            margin-right:2.5rem;
+            margin-top:2.5rem;
+            #link-title{
+
+            }
+            
+        }
+
+
+    }
+    
+    #education-container{
+        
+        
+
+    }
+    #experience-container{
+
+    }
+    #project-container{
+        a{
+            
+            
+            color:blue;
+            cursor:pointer;
+            text-decoration: none;
+            
+            
+        }
+    }
+    }
+
+}
+}
