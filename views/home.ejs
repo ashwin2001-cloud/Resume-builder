@@ -1,0 +1,91 @@
+<title>Add details</title>
+<link rel="stylesheet" href="/css/home.css">
+
+<div>
+    
+    <form action="/home/resume/create" method="POST">
+        
+        <section id="education" class="common-sec">
+            <div class="util">
+                <h2>Education</h2>
+                <button class="add-btn" id="ed-add-btn">+</button>
+            </div>
+            <div id="ed-0" class="common">
+                <button class="remove-btn" id="ed-remove-btn">X</button>
+                <div class="info" id="0">
+                    <input type="text" name="degree" placeholder="Degree" required>
+                    <input type="text" name="institute" placeholder="College or University name" style="margin-bottom:50px;" required>
+                    <label style="margin-top:100px;" for="start-date">Start Date</label>
+                    <input type="date" name="edstart" id="ed-start-date" value="2019-01-01" required>
+                    
+                    <label for="end-date">End Date</label>
+                    <input type="date" name="edend" id="ed-end-date" value="2019-01-01" required>                    
+                </div>
+            </div>
+
+        </section>
+        <section id="exp" class="common-sec">
+            <div class="util">
+                <h2>Experience</h2>
+                <button class="add-btn" id="exp-add-btn">+</button>
+            </div>
+            <div id="exp-0" class="common">
+                <button class="remove-btn" id="exp-remove-btn">X</button>
+                <div class="info" id="0">
+                    <input type="text" name="organisation" placeholder="Company name" required>
+                    <textarea name="exdescription" placeholder="Describe what you have done in the company?" required columns="20" rows="6"></textarea>
+                    <input type="text" name="designation" placeholder="Designation" style="margin-bottom:50px;" required>
+                    
+                    <label for="start-date">Start Date</label>
+                    <input type="date" name="exstart" id="ex-start-date" value="2019-01-01" required>
+                    
+                    <label for="end-date">End Date</label>
+                    <input type="date" name="exend" id="ex-end-date" value="2019-01-01" required>
+                    
+                </div>
+            </div>
+
+
+        </section>
+        <section id="project" class="common-sec">
+            <div class="util">
+                <h2>Projects</h2>
+                <button class="add-btn" id="project-add-btn">+</button>
+
+
+            </div>
+            <div id="project-0" class="common">
+                <button class="remove-btn" id="project-remove-btn">X</button>
+                <div class="info" >
+                        <input type="text" name="title" placeholder="Name of the project" required>
+                        
+                        <textarea name="projectdescription" placeholder="Describe your project" required columns="20" rows="6"></textarea>
+                        <input type="url" name="link" placeholder="Ex: http://myprojectlink.com">
+                        
+                </div>
+            </div>
+
+        </section>
+        <section id="social-links" class="common-sec">
+            <div class="util">
+                <h2>Social Links</h2>
+                <button class="add-btn" id="social-link-add-btn">+</button>
+            </div>
+            <div id="social-links-0" class="common">
+                <button class="remove-btn" id="social-link-remove-btn">X</button>
+                <div class="info" >
+                        
+                    <input type="text" name="linktitle" placeholder="Title" required>
+                        <input type="url" name="userlink" placeholder="Ex: github.com or linkedin.com">
+                        
+                </div>
+            </div>
+
+
+        </section>
+        <input type="hidden" name="curuser" value="<%= user._id %>">
+        <input type="submit" value="SAVE">
+    </form>
+</div>
+<!-- <script src="/js/home.js"></script> -->
+    

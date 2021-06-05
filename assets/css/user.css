@@ -1,0 +1,38 @@
+body {
+  background-color: #2623e8; }
+  body div {
+    background-color: #2623e8; }
+    body div form {
+      width: 200%;
+      min-width: 300px;
+      max-width: 400px;
+      border-radius: 4px;
+      background: white;
+      padding: 20px;
+      margin: auto; }
+      body div form h2 {
+        font-family: sans-serif; }
+      body div form .info {
+        background: white; }
+        body div form .info input {
+          width: 100%;
+          outline: none;
+          border: none;
+          border-bottom: 1px solid #3e64ff;
+          margin: 25px 0;
+          color: black;
+          font-size: 15px;
+          font-family: sans-serif;
+          padding: 10px; }
+      body div form input[type="submit"] {
+        background-color: #ff3f98;
+        color: white;
+        font-size: 0.8rem;
+        outline: none;
+        cursor: pointer;
+        border: none;
+        margin-top: 0.5rem;
+        width: 35%;
+        padding: 0.7rem;
+        font-family: sans-serif;
+        border-radius: 3%; }
